@@ -15,4 +15,6 @@
 
 ![screen shot 2017-08-22 at 9 48 56 am](https://user-images.githubusercontent.com/26729817/29545185-84e4ea1c-871f-11e7-8329-64644fbe950d.png)
 
+![screen shot 2017-08-22 at 9 49 32 am](https://user-images.githubusercontent.com/26729817/29545199-8ce7d6fc-871f-11e7-92f6-ef6e86fbede9.png)
+
 
