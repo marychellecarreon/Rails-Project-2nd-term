@@ -20,7 +20,7 @@
 
 ![screen shot 2017-08-22 at 9 49 32 am](https://user-images.githubusercontent.com/26729817/29545199-8ce7d6fc-871f-11e7-92f6-ef6e86fbede9.png)
 
-
+###### MUST SIGNED IN (EITHER EMAIL OR FACEBOOK ACCOUNT) TO BUY AVAILABLE MILK
 
 ![screen shot 2017-08-22 at 9 50 35 am](https://user-images.githubusercontent.com/26729817/29545218-9cd0506c-871f-11e7-8a3c-fe29c7b2cc43.png)
 
