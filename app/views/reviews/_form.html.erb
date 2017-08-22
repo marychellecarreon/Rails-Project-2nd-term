@@ -1,0 +1,24 @@
+
+<div class="reviewform">
+<%= form_for([@milk, @milk.reviews.build]) do |f| %>
+
+<center><label>Ratings</label></center>
+<center><div id="rating-form">
+</div></center>
+
+<div class="field">
+  <%= f.label :comment %><br />
+  <%= f.text_area :comment %>
+</div>
+
+<div class="field">
+  <%= f.submit %>
+</div>
+<% end %>
+
+</div>
+
+<script>
+  $('#rating-form').raty({ scoreName: 'review[rating]'
+   });
+   </script>

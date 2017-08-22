@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+    
+    </br>
+    </br>
+    <div class =".col.col-sm-6.col-md-5.col-lg-6" id = "indshow">
+        <%= image_tag(@milk.avatar.url(:medium)) %>
+
+    <p>
+      <strong>Price per pack: </strong>
+      <p><span class="glyphicon glyphicon-hand-right"></span>   <%= @milk.price %> PHP </p>
+    </p>
+
+    <p>
+      <strong>Owner:</strong>
+      <p><span class="glyphicon glyphicon-user"></span>   <%= @milk.owner %></p>
+    </p>
+
+    <p>
+      <strong>Country:</strong>
+      <p><span class="glyphicon glyphicon-flag"></span>   <%= @milk.country %></p>
+    </p>
+
+    <p>
+      <strong>City:</strong>
+      <p><span class="glyphicon glyphicon-road"></span> <%= @milk.city %></p>
+    </p>
+
+    <%= render 'buys/form' %>
+
+    <div id="reviews">
+        <p> AVERAGE RATING <p>
+           <div class="average-review-rating" data-score=<%= @average_review %>></div>
+           <span> Based on <%=@milk.reviews.count %> review/s </span>
+        </p>
+
+    <%= render @milk.reviews %>
+    <%= link_to 'Write a Review', new_milk_review_path(@milk) %> |
+    <%= link_to 'Back', milks_path %>
+
+    </div>
+</div>
+</div>
+</div>
+
+<div id = "map">
+    <script>
+      function initMap() {
+        var uluru = {lat: <%= @milk.latitude %>, lng: <%= @milk.longitude %>};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHOnCFKBdLisShrN4r41bfyqR02ZWZ6Bs&callback=initMap">
+    </script>
+</div>
+<script>
+   $('.review-rating').raty({
+     readOnly: true,
+     score: function() {
+       return $(this).attr('data-score');
+     }
+   });
+ </script>
+
+ <script>
+   $('.average-review-rating').raty({
+     readOnly: true,
+     score: function() {
+       return $(this).attr('data-score')
+     }
+   });
+ </script>
+
+
+

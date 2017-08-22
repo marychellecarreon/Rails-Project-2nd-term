@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purchased_date: 2017-08-13
+  price: 1
+  totalprice: 1
+  user_id: 
+  milk_id: 
+
+two:
+  purchased_date: 2017-08-13
+  price: 1
+  totalprice: 1
+  user_id: 
+  milk_id: 

@@ -1,0 +1,14 @@
+<p>
+  <center><strong>Purchased date:</strong></center>
+  <center><%= @buy.purchased_date %></center>
+</p>
+
+<p>
+  <center><strong>Price:</strong></center>
+  <center><%= @buy.price %></center>
+</p>
+
+
+
+<center><%= link_to 'Edit', edit_buy_path(@buy) %> |
+<%= link_to 'Back', buys_path %></center>

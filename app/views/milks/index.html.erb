@@ -1,0 +1,111 @@
+<div class = "wntmlk">
+  <h4>WANT SOME MILK?</h4>
+</div>
+
+<div id = "availablemilk">
+  <center><%= link_to 'Sell Your Milk Here', new_milk_path, class: "btn btn-default sellmlk" %></center>
+</div>
+
+</br>
+
+<div class = "search">
+  <%= form_tag milks_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search], :class => "form-control searchfield" %>
+      <%= submit_tag "Search Location", :city => nil, :class => "btn btn-default search" %>
+    </p>
+  <% end %>
+</div>
+
+<div class = "">
+  <div class = "col-xs-12 col-sm-12 col-md-8 col-lg-8 container-fluid">
+    <% @milks.each do |milk| %>     
+    <% @reviews = milk.reviews
+      @average_review = milk.reviews.average(:rating)
+    %>
+    
+    <div class = "col-sm-4 col-md-3 col-lg-3" id = "indivpost">
+      <%= image_tag milk.avatar.url(:medium) %>
+      <p><span class="glyphicon glyphicon-hand-right"></span> <%= milk.price %> PHP per pack/bottle </p></br>
+      <p><span class="glyphicon glyphicon-map-marker"></span><%= milk.city %></p></br>
+      <p><span class="glyphicon glyphicon-time"></span>Posted <%= time_ago_in_words(milk.created_at)%> ago </p></br>
+    
+      <div class="average-review-rating" data-score=<%= @average_review %>></div>
+        <%= link_to 'Show', milk %>
+        <%= link_to 'Edit', edit_milk_path(milk) %>
+        <%= link_to 'Delete', milk, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<!--<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Price (per pack)</th>
+      <th>Owner</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>Date Created</th>
+         <th>Updated</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @milks.each do |milk| %>
+      <tr>
+        <td><%= image_tag(milk.user.avatar.url(:thumb)) %></td>
+        <td><%= milk.price %></td>
+        <td><%= milk.owner %></td>
+        <td><%= milk.country %></td>
+        <td><%= milk.city %></td>
+        <td><%= time_ago_in_words(milk.created_at)%> ago </td>
+        <td><%= time_ago_in_words(milk.updated_at)%> ago </td>
+        <td><%= image_tag milk.avatar.url(:medium) %></td>
+        <td><%= link_to 'Show', milk %></td>
+        <td><%= link_to 'Edit', edit_milk_path(milk) %></td>
+        <td><%= link_to 'Destroy', milk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>-->
+<br>
+
+
+<div class = "row">
+  <div class = "container" id = "mapcol">
+    <div id = "map"></div>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHOnCFKBdLisShrN4r41bfyqR02ZWZ6Bs&callback=initMap">
+      </script>
+      <script>
+        function initMap() {
+          var uluru = {lat: 14.5651063, lng: 120.9939266 };
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 5,
+            center: uluru
+          });
+        <% @milks.each do |milk| %>
+          var marker = new google.maps.Marker({
+            position: {lat:<%= milk.latitude %>, lng: <%= milk.longitude %>},
+            map: map
+          });
+        <% end %>
+        }
+      </script>
+  </div>
+</div>
+</div>
+
+
+<script>
+   $('.average-review-rating').raty({
+     readOnly: true,
+     score: function() {
+       return $(this).attr('data-score')
+     }
+   });
+ </script>

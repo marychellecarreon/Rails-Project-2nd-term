@@ -1,0 +1,333 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Arapey');
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+
+
+body {
+  padding-top: 0px;
+  background-color: white;
+  color: #333;
+  font-family: 'Arapey', serif;
+  line-height: 18px;
+}
+
+container {
+    width: 100%;
+}
+
+.round-image-50 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    }
+     
+
+
+.navbar-nav {
+    text-decoration: underline #FF5992;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 40px;
+    color: #FA7C92 !important;
+}
+  
+#availablemilk {
+    font-weight: 900;
+    color: #FF5992;
+    font-size: 50px;
+}
+
+/*#availablemilkfront {
+    font-weight: 900;
+    color: #FF5992;
+    font-size: 50px;
+}*/
+
+#indivpost {
+    border: 1px solid #FF5992;
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.milkform {
+    font-size: 18px;
+}
+
+#indshow {
+    font-size: 14px;
+    text-align: left;
+}
+
+.reviewform {
+    font-size: 18px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#reviews {
+   border: 1px solid #FE6B57;
+   background-color: #FA7C92;
+}
+
+.editprofile {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.signup {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.login {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.search {
+    text-align: center;
+}
+
+.navy {
+    font-family: 'Caveat Brush', cursive;
+}
+
+.searchfield {
+    width: 30%;
+    margin-left: 500px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.search {
+    margin-top: 10px;
+}
+
+.wntmlk h4 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 60px;
+    color: #FF5992;
+    font-weight: 900;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    max-width: 100%;
+}
+
+
+#mapcol {
+    display: none !important;
+    padding-top: 200px;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.indivpost {
+    width: 100%;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    margin: 50px 0 0 0;
+}}
+     
+/*landing page*/
+#availablemilkfront {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.frontimg {
+    background: url('../images/breastmilk.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    background-size: 100%;
+    height: 800px;
+    z-index: -1;
+}
+
+.frontlink {
+    z-index: 2;
+    position: absolute;
+    top: 600px;
+    left: 550px;
+    color: #FA7C92;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.frontinfo h1 {
+    font-size: 60px;
+    position: absolute;
+    top: 400px;
+    left: 280px;
+    z-index: 2;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #ffffff;
+}
+
+.frontinfo h2 {
+    font-size: 40px;
+    position: absolute;
+    top: 470px;
+    left: 380px;
+    z-index: 2;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #ffffff;
+}
+
+.frontlogo {
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    left: 500px;
+}
+
+.container-fluid {
+    width: 100%;
+    height: 800px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.generaldiv h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin-top: 50px;
+}
+
+.generaldiv p {
+    text-align: justify;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.goal {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.info, .team {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.info li {
+    text-align: center;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.info h3 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.atechell {
+    position: relative;
+    top: 50px;
+    left: 350px;
+    width: auto;
+    height: 400px;
+    transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-moz-transform: rotate(10deg)
+}
+
+.memeh2 {
+    position: relative;
+    top: 100px;
+    left: 350px;
+    width: auto;
+    height: 400px;
+    transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg)
+}
+/*end of landing page*/
+
+/* navbar */
+.navbar {
+    margin-bottom: 0px !important;
+}
+/* end of navbar */
+
+.update {
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.editprofile h1 {
+    color: #FA7C92
+}
+
+.saynap {
+    margin-top: 10px;
+}
